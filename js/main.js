@@ -81,7 +81,7 @@
   /* ---- Contact form ---- */
   const form = document.getElementById('contact-form');
   if (form) {
-    form.addEventListener('submit', function (e) {
+    form.addEventListener('submit', async function (e) {
       e.preventDefault();
       const btn = form.querySelector('[type="submit"]');
       const required = form.querySelectorAll('[required]');
@@ -100,15 +100,31 @@
       btn.textContent = 'Sending…';
       btn.disabled = true;
 
-      // Simulate submission — replace with real backend/formspree endpoint
-      setTimeout(() => {
+      try {
+        const response = await fetch(form.action, {
+          method: form.method || 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        });
+
+        if (!response.ok) {
+          throw new Error('Form submission failed');
+        }
+
         const success = document.createElement('div');
         success.style.cssText = 'background:#d1fae5;border:1px solid #10b981;border-radius:8px;padding:16px 20px;margin-top:16px;font-size:.93rem;color:#065f46;font-weight:500;';
         success.textContent = 'Message received — we\'ll be in touch within one business day. For urgent freight needs, call us directly.';
         form.appendChild(success);
         form.reset();
         btn.textContent = 'Message Sent';
-      }, 1200);
+      } catch (error) {
+        const failure = document.createElement('div');
+        failure.style.cssText = 'background:#fee2e2;border:1px solid #f87171;border-radius:8px;padding:16px 20px;margin-top:16px;font-size:.93rem;color:#991b1b;font-weight:500;';
+        failure.textContent = 'We could not send your message. Please try again or call us directly.';
+        form.appendChild(failure);
+        btn.textContent = 'Send Message';
+        btn.disabled = false;
+      }
     });
   }
 

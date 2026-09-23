@@ -1114,6 +1114,24 @@ p  { line-height: 1.75; color: var(--steel); }
   margin-bottom: 20px;
   line-height: 1.6;
 }
+.form-sms-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: var(--text-dark);
+}
+.form-sms-consent input {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  margin: 2px 0 0;
+  accent-color: var(--gold-dark);
+  cursor: pointer;
+}
+.form-sms-consent label {
+  cursor: pointer;
+}
 .form-consent a { color: var(--gold-dark); text-decoration: underline; }
 
 /* =====================================================

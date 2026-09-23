@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Landing Page -->
+  <url>
+    <loc>https://www.milliondollartransport.com/</loc>
+    <priority>1.00</priority>
+  </url>
+  
+  <!-- Main Services & Info Pages -->
+  <url>
+    <loc>https://www.milliondollartransport.com/about.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.milliondollartransport.com/services.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.milliondollartransport.com/fleet.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.milliondollartransport.com/dispatch.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.milliondollartransport.com/contact.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Legal & Compliance Pages -->
+  <url>
+    <loc>https://www.milliondollartransport.com/privacy.html</loc>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://www.milliondollartransport.com/terms.html</loc>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://www.milliondollartransport.com/sms-terms.html</loc>
+    <priority>0.50</priority>
+  </url>
+</urlset>
